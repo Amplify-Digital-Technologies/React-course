@@ -1,21 +1,23 @@
 import './App.css';
+import Employee from './components/Employee';
 
 function App() {
+  console.log("I am learning React again after a long while");
+  const showEmployees = false;  
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Hello World...
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {console.log("Inside the return loop")}
+      {showEmployees ? (
+        <>
+          <Employee />
+          <Employee />
+          <Employee />
+          <Employee />
+        </>
+      ) : (
+        <p>You don't have access to employees</p>
+      )}
+        
     </div>
   );
 }
